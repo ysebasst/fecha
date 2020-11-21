@@ -1,0 +1,2 @@
+*{margin:0;padding:0;box-sizing:border-box}body{background-color:#555}.content{min-height:100vh;display:flex;justify-content:center;flex-direction:column;align-items:center}.fecha-hora{background-color:#555;color:#fff;font-size:2rem;font-weight:700;text-align:center}.hora{font-size:5rem}.en-punto{-webkit-filter:invert(100%);filter:invert(100%)}@media (min-width:576px){.hora{font-size:7rem}}@media (min-width:768px){.hora{font-size:9rem}}@media (min-width:992px){.hora{font-size:11rem;font-size:13rem}}
+/*# sourceMappingURL=main.8fe9bbef.chunk.css.map */
