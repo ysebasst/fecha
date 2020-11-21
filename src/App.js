@@ -5,7 +5,7 @@ function App() {
   const [fecha, setFecha] = useState("1 Enero 2000");
   const [hora, setHora] = useState("00:00:00");
 
-  const element = useRef()
+  const element = useRef();
 
   const nombresDia = [
     "Domingo",
@@ -35,22 +35,24 @@ function App() {
   function cambiarHora() {
     let date = new Date();
     let diaSem = nombresDia[date.getDay()];
-    let diaMes = date.getDate()<10?`0${date.getDate()}`:date.getDate();
+    let diaMes = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate();
     let mes = nombresMes[date.getMonth()];
     let year = date.getFullYear();
 
-    let hora = date.getHours()>12?date.getHours()-12:date.getHours();
-    hora = hora<10?`0${hora}`:hora;
-    let min = date.getMinutes()<10?`0${date.getMinutes()}`:date.getMinutes();
-    let seg = date.getSeconds()<10?`0${date.getSeconds()}`:date.getSeconds();
+    let hora = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
+    hora = hora < 10 ? `0${hora}` : hora;
+    let min =
+      date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
+    let seg =
+      date.getSeconds() < 10 ? `0${date.getSeconds()}` : date.getSeconds();
 
     setDiaSemana(`${diaSem}`);
     setFecha(`${diaMes} ${mes} ${year}`);
     setHora(`${hora}:${min}:${seg}`);
 
-    if ((date.getMinutes()===0) && (date.getSeconds() % 2 === 0)) {
+    if (date.getMinutes() === 0 && date.getSeconds() % 2 === 0) {
       element.current.classList.add("en-punto");
-    } else{
+    } else {
       element.current.classList.remove("en-punto");
     }
   }
@@ -61,9 +63,9 @@ function App() {
 
   return (
     <div className="content fecha-hora" ref={element}>
-      <div className="dia-semana">{diaSemana}</div>
-      <div className="fecha">{fecha}</div>
       <div className="hora">{hora}</div>
+      <div className="fecha">{fecha}</div>
+      <div className="dia-semana">{diaSemana}</div>
     </div>
   );
 }

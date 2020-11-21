@@ -1,14 +1,14 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  background-color: #333;
+body {
+  background-color: #555;
 }
 
-.content{
+.content {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -16,24 +16,39 @@ body{
   align-items: center;
 }
 
-.fecha-hora{
+.fecha-hora {
+  background-color: #555;
   color: white;
-  font-size: 7rem;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
 }
 
-.en-punto{
+.hora {
+  font-size: 5rem;
+}
+
+.en-punto {
   filter: invert(100%);
 }
 
-@media(max-width:768px){
-  .fecha-hora{
-      font-size: 5rem;
+@media (min-width: 576px) {
+  .hora {
+    font-size: 7rem;
   }
 }
-@media(max-width:576px){
-  .fecha-hora{
-      font-size: 3rem;
+@media (min-width: 768px) {
+  .hora {
+    font-size: 9rem;
+  }
+}
+@media (min-width: 992px) {
+  .hora {
+    font-size: 11rem;
+  }
+}
+@media (min-width: 992px) {
+  .hora {
+    font-size: 13rem;
   }
 }
